@@ -20,13 +20,13 @@ from streamlit import config
 cache_was_hit = True
 
 
-@st.cache
+@st.cache_data
 def check_if_cached():
     global cache_was_hit
     cache_was_hit = False
 
 
-@st.cache
+@st.cache_data
 def my_func(arg1, arg2=None, *args, **kwargs):
     return random.randint(0, 2**32)
 
@@ -85,7 +85,7 @@ else:
 
     # Redefine my_func because the st.cache-decorated function "remembers" the
     # config option from when it was declared.
-    @st.cache
+    @st.cache_data
     def my_func(arg1, arg2=None, *args, **kwargs):
         return random.randint(0, 2**32)
 

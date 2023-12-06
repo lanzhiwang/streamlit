@@ -28,6 +28,15 @@ lists = [
 
 
 for i, l in enumerate(lists):
+    # print(i, l)
+    # 0 []
+    # 1 [10, 20, 30]
+    # 2 [[10, 20, 30], [1, 2, 3]]
+    # 3 [[10, 20, 30], [1]]
+    # 4 [[10, 'hi', 30], [1]]
+    # 5 [[{'foo': 'bar'}, 'hi', 30], [1]]
+    # 6 [[{'foo': 'bar'}, 'hi', 30], [1, [100, 200, 300, 400]]]
+
     st.header("List %d" % i)
 
     st.write("With st.write")

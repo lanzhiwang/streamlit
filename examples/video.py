@@ -44,7 +44,7 @@ def get_video_files_in_dir(directory):
     return out
 
 
-avdir = os.path.expanduser("~")
+avdir = os.path.expanduser("~")  # '/root'
 files = get_video_files_in_dir(avdir)
 
 if len(files) == 0:
